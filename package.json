@@ -2,6 +2,9 @@
   "name": "green-page-stc",
   "type": "module",
   "version": "0.0.1",
+  "overrides": {
+    "undici": "^7.30.1"
+  },
   "engines": {
     "node": ">=22.12.0"
   },
@@ -13,10 +16,10 @@
     "generate-types": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.3.4",
+    "@astrojs/cloudflare": "^14.4.2",
     "astro": "^7.3.5",
     "photoswipe": "^5.4.4",
-    "wrangler": "^4.148.0"
+    "wrangler": "^4.152.0"
   },
   "allowScripts": {
     "esbuild": true
