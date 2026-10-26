@@ -1,6 +1,5 @@
 ---
-import '../styles/global.css'; // Ensure import filename matches global_2.css
-// import fonts for self-hosting from @fontsource if custom fonts are required.
+import '../styles/global.css';
 import WhatsAppButton from '../components/WhatsAppFloat.astro';
 
 interface Props {
@@ -10,9 +9,9 @@ interface Props {
 }
 
 const { 
-  title = "Website Title", 
-  description = "Website Description",
-  image = "/favicon.ico"
+  title = "Susan Corbett Racing", 
+  description = "Racehorse Training in Northumberland",
+  image = "/susan-corbett-racing-logo-2"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
@@ -39,9 +38,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
     <meta property="og:image" content={new URL(image, Astro.site || Astro.url.origin)} />
 
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/helix-favicon.svg" />
-    <link rel="icon" href="/helix-favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/helix-favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/susan-corbett-racing-logo-1.svg" />
+    <link rel="icon" href="/susan-corbett-racing-logo-1.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/susan-corbett-racing-logo-1.png" />
     
 </head>
 
@@ -52,8 +51,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 <header class="header">
   <div class="header-inner">
       <a href="/" class="logo-link">
-        <img src="/favicon.svg" alt="" class="header-logo" width="32" height="32"/>
-        <span class="logo-title">Website Title</span>
+        <span class="logo-title">Susan Corbett Racing</span>
       </a>
   
     <!-- Hamburger Toggle Button -->
@@ -71,9 +69,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 
     <nav class="nav-links" id="nav-menu">
       <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+      <a href="/news">News</a>
+      <a href="/team">Our Team</a>
+      <a href="/horses">Horses In Training</a>
+      <a href="/facilities">Facilities</a>
+      <a href="/syndicates">Our Syndicates</a>
+      <a href="/sales">Sales and Shares</a>
+      <a href="/fees">Fees</a>
+      <a href="/about">About Us</a>
     </nav>
 
     <script>
@@ -113,8 +116,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 <footer class="footer">
   <hr class="divider-full" />
   
-  <p>Business name, company registration number, charity registration number</p>
-  <p>&copy; {new Date().getFullYear()} Business Name. All rights reserved.</p>
+  <p>Susan Corbett Racing</p>
+  <p>&copy; {new Date().getFullYear()} Susan Corbett Racing. All rights reserved.</p>
 
   <nav class="footer-nav" aria-label="Legal navigation">
     <a href="/privacy">Privacy Policy</a>
@@ -122,7 +125,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
     <a href="/accessibility">Accessibility Statement</a>
   </nav>
 
-  <WhatsAppButton phoneNumber="+1234567890" message="Hello! I would like to get in touch." />
+  <WhatsAppButton phoneNumber="+447713651215" message="Hello. I have an enquiry about your yard." />
 
 </footer>
 
