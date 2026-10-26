@@ -50,9 +50,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 
 <header class="header">
   <div class="header-inner">
-      <a href="/" class="logo-link">
-        <span class="logo-title">Susan Corbett Racing</span>
-      </a>
   
     <!-- Hamburger Toggle Button -->
     <button 
@@ -73,7 +70,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
       <a href="/team">Our Team</a>
       <a href="/horses">Horses In Training</a>
       <a href="/facilities">Facilities</a>
-      <a href="/syndicates">Our Syndicates</a>
+      
+      <!-- Dropdown Sub-Menu  -->
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">Our Syndicates ▾</button>
+        <div class="dropdown-menu">
+          <a href="/syndicates/girsonfield">Girsonfield Syndicate</a>
+          <a href="/syndicates/otterburn">Otterburn Syndicate</a>
+        </div>
+      </div>
+
       <a href="/sales">Sales and Shares</a>
       <a href="/fees">Fees</a>
       <a href="/about">About Us</a>
@@ -101,6 +107,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
           }
         });
       }
+
+        // --- New Dropdown Logic ---
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownBtn = document.querySelector('.dropdown-toggle') as HTMLButtonElement;
+
+      if (dropdown && dropdownBtn) {
+        // Toggle menu on button click
+        dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents click from bubbling up
+        dropdown.classList.toggle('is-open');
+        
+        const isOpen = dropdown.classList.contains('is-open');
+        dropdownBtn.setAttribute('aria-expanded', isOpen.toString());
+        });
+
+        // Close dropdown if user clicks anywhere outside of it
+        document.addEventListener('click', (e) => {
+        if (e.target instanceof Node && !dropdown.contains(e.target) && dropdown.classList.contains('is-open')) {
+        dropdown.classList.remove('is-open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+        }});
+        
+        // Close dropdown when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && dropdown.classList.contains('is-open')) {
+        dropdown.classList.remove('is-open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+        dropdownBtn.focus();
+        }});
+      }
+
     </script>
 
   </div>
