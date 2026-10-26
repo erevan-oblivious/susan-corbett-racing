@@ -5,7 +5,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  // <-- Add 'site: 'https://www.greenpage.uk',' - which is required for canonical url configuration.
+  site: 'https://www.susancorbettracing.co.uk',
   output: 'server', // <-- Required for API endpoints to work
   adapter: cloudflare()
 });
