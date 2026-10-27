@@ -4,6 +4,8 @@ import HeroImage from '../components/HeroImage.astro';
 
 import bgImage from '../images/desktop-background.webp';
 import bgImageMobile from '../images/mobile-background.webp';
+
+import NavGrid from '../components/NavGrid.astro'
 ---
 
 <BaseLayout 
@@ -23,7 +25,27 @@ import bgImageMobile from '../images/mobile-background.webp';
   secondaryButtonText = "Text for secondary button",
   secondaryButtonLink,
   tintOpacity = "50%",
-
 />
+
+<section class="prose-container">
+
+  <header class="section-header">
+    <h2>Welcome to Susan Corbett Racing</h2>
+  </header>
+
+  <div>
+    <p>We are a family run racing yard in the North-East. We offer modern training for both National Hunt and Flat horses.</p>
+    <p>We established our business Girsonfield Stud in Otterburn in 1999 with the ambition of creating an affordable thoroughbred stud farm for Northern breeders. From these origins Girsonfield has grown from a stud to a competitive racing yard - now Susan Corbett Racing.</p>
+    <p>Our team is family orientated and professional and we give everything to fulfil the potential of every horse in our care. As part of this, we are committed to involving our clients in the yard through regular communication, yard visits, and get togethers.</p>
+    <p>Don't hesitate to contact us if you want to join our growing group of owners, members, and supporters.</p>
+  </div>
+
+  <button class="btn btn-primary">Enquire</button>
+
+</section>
+
+<hr class="divider-full">
+
+<NavGrid />
 
 </BaseLayout>

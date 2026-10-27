@@ -573,6 +573,7 @@ hr.divider-full-inverted {
   justify-content: center;
   gap: 0.625rem;
   padding: 0.875rem 1.75rem;
+  margin: 1.25rem;
   font-size: var(--font-size-base);
   font-weight: 600;
   border-radius: var(--radius-sm, 6px);
@@ -585,7 +586,7 @@ hr.divider-full-inverted {
 .btn-primary {
   background-color: var(--primary);
   color: var(--text-primary);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--secondary);
 }
 
 .btn-primary:hover {

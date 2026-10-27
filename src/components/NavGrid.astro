@@ -16,31 +16,31 @@ interface Props {
 
 const defaultItems: CardItem[] = [
   {
-    title: "Primary Services",
-    description: "Comprehensive solutions tailored to your needs, delivered with consistency and attention to detail.",
-    link: "/services",
-    linkText: "Explore Services",
+    title: "Horses in Training",
+    description: "Flat and National Hunt",
+    link: "/horses",
+    linkText: "Get To Know Them",
     accent: "primary"
   },
   {
-    title: "About Our Business",
-    description: "Learn more about us, our values, and our commitment to exceptional service quality.",
-    link: "/about",
-    linkText: "Read Our Story",
+    title: "Sales and Shares",
+    description: "Opportunities for Ownership",
+    link: "/sales",
+    linkText: "Take A Look",
     accent: "secondary"
   },
   {
-    title: "Contact Us",
-    description: "Get in touch with us",
-    link: "/contact",
-    linkText: "Contact Us",
+    title: "Our Team",
+    description: "Working With Your Horses",
+    link: "/team",
+    linkText: "Get To Know US",
     accent: "primary"
   }
 ];
 
 const {
   eyebrow,
-  title,
+  title = "Take a Look Around",
   subtitle,
   items = defaultItems
 } = Astro.props;
