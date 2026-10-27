@@ -6,12 +6,14 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  transparentHeader?: boolean; /* Allows for optional transparent header for homepage */
 }
 
 const { 
   title = "Susan Corbett Racing", 
   description = "Racehorse Training in Northumberland",
-  image = "/susan-corbett-racing-logo-2"
+  image = "/susan-corbett-racing-logo-2",
+  transparentHeader = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
@@ -48,7 +50,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
     
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header class="header">
+<header class={`header ${transparentHeader ? 'header-transparent' : ''}`}>
   <div class="header-inner">
   
     <!-- Hamburger Toggle Button -->
@@ -75,8 +77,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
       <div class="dropdown">
         <button class="dropdown-toggle" aria-haspopup="true">Our Syndicates ▾</button>
         <div class="dropdown-menu">
-          <a href="/syndicates/girsonfield">Girsonfield Syndicate</a>
-          <a href="/syndicates/otterburn">Otterburn Syndicate</a>
+          <a href="/syndicates/girsonfield">The Girsonfield Racing Syndicate</a>
+          <a href="/syndicates/otterburn">The Otterburn Racing Syndicate</a>
+          <a href="/syndicates/northern">The Northern Racing Syndicate</a>
+          <a href="/syndicates/ladies-that-race">The Ladies That Race Syndicate</a>
+          <a href="/syndicates/goodfellow">The Goodfeloow Racing Syndicate</a>
+          <a href="/syndicates/nelson">The Nelson Racing Syndicate</a>
+          <a href="/syndicates/race4fun">The Race4Fun Syndicate</a>
+          <a href="/syndicates/tweed-valley">The Tweed Valley Racing Syndicate</a>
+          <a href="/syndicates/naughty-but-nice">The Naughty But Nice And Ours For Life Syndicate</a>
+          <a href="/syndicates/eclipse">The Eclipse Racing Club</a>
+
         </div>
       </div>
 

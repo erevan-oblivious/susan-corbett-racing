@@ -1,20 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage.astro';
 
+import bgImage from '../images/desktop-background.webp';
+import bgImageMobile from '../images/mobile-background.webp';
 ---
 
 <BaseLayout 
-  title="Webpage Name | Business Name"
-  description="Webpage Description"
+  title="Home | Susan Corbett Racing"
+  description="Racehorse Training with Susan Corbett at Girsonfield, Northumberland"
+  transparentHeader={true}
 >
 
-<section>
+<HeroImage 
+  title = "Susan Corbett Racing",
+  lead = "Trainer of Flat and National Hunt Horses in the North East"
+  description,
+  bgImage = {bgImage}
+  bgImageMobile = {bgImageMobile}
+  primaryButtonText = "Check Sales and Shares Now",
+  primaryButtonLink = /sales
+  secondaryButtonText = "Text for secondary button",
+  secondaryButtonLink,
+  tintOpacity = "50%",
 
-  <header class="section-header">
-    <span class="section-eyebrow">Eyebrow</span>
-    <h1>Welcome</h1>
-  </header>
-
-</section>
+/>
 
 </BaseLayout>

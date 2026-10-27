@@ -508,8 +508,8 @@ hr.divider-full {
   background: linear-gradient(
     90deg, 
     transparent 0%, 
-    var(--text-secondary) 20%, 
-    var(--text-secondary) 80%, 
+    var(--text-primary) 20%, 
+    var(--text-primary) 80%, 
     transparent 100%
   );
 }
@@ -536,7 +536,7 @@ hr.divider-full-inverted {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -660,7 +660,7 @@ hr.divider-full-inverted {
   text-align: center;
   padding: 1.25rem 2rem;
   font-size: var(--font-size-base);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .footer-nav {
@@ -673,7 +673,7 @@ hr.divider-full-inverted {
 
 /* Links within the footer */
 .footer a {
-  color: var(--text-secondary); /* Matches default footer text color */
+  color: var(--text-primary); /* Matches default footer text color */
   transition: color 0.2s ease;
   text-decoration: none;
 }
@@ -681,5 +681,5 @@ hr.divider-full-inverted {
 /* Hover and focus states for accessibility */
 .footer a:hover,
 .footer a:focus {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
