@@ -22,6 +22,7 @@
     "wrangler": "^4.152.0"
   },
   "allowScripts": {
-    "esbuild": true
+    "esbuild": true,
+    "workerd@1.20261019.1": true
   }
 }

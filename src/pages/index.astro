@@ -5,7 +5,37 @@ import HeroImage from '../components/HeroImage.astro';
 import bgImage from '../images/desktop-background.webp';
 import bgImageMobile from '../images/mobile-background.webp';
 
-import NavGrid from '../components/NavGrid.astro'
+import NavGrid from '../components/NavGridImage.astro';
+import NewsGrid from '../components/NavGridImage.astro';
+
+import newsImg1 from '../images/desktop-background.webp';
+import newsImg2 from '../images/desktop-background.webp';
+import newsImg3 from '../images/desktop-background.webp';
+
+// Define the top 3 news items using the NavGrid structure
+const newsItems = [
+  {
+    title: "WINNER - WEE ALKI",
+    description: "Well done to the team today for another great win for Wee Alki! Ridden over 3 miles at Perth by Nathan Moscrop.",
+    accent: "primary",
+    image: newsImg1,
+    imageAlt: "Wee Alki, staff and owners in the winning enclosure at Perth Racecourse."
+  },
+  {
+    title: "OPEN DAY - NATIONAL RACEHORSE WEEK",
+    description: "Join us at Girsonfield for our open day in support of National Racehorse Week. 22nd August 10.30 - 3.00 We have a program of events",
+    accent: "secondary",
+    image: newsImg2,
+    imageAlt: "Open Day attendees watching a training demonstation."
+  },
+  {
+    title: "WINNER - FREDDIE STEADY GO",
+    description: "Far from the bookmaker's favourite - Freddie Steady Go upset the odds today with an incredible win at Carlisle. Well done Cam Hardie and the team.",
+    accent: "primary",
+    image: newsImg3,
+    imageAlt: "Freddie Steady Go pictured racing at Carlisle Racecourse."
+  }
+];
 ---
 
 <BaseLayout 
@@ -47,5 +77,17 @@ import NavGrid from '../components/NavGrid.astro'
 <hr class="divider-full">
 
 <NavGrid />
+
+<hr class="divider-full">
+
+<NewsGrid 
+  title="Latest News",
+  items={newsItems} 
+/>
+
+<!-- Centered 'See More' Button -->
+<div class="prose-container" style="margin-top: -2rem;">
+  <a href="/news" class="btn btn-secondary">See All News</a>
+</div>
 
 </BaseLayout>
